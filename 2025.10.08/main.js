@@ -44,12 +44,7 @@ function refreshTable(){
                 <td>${newUser.username}</td>
                 <td>${newUser.password}</td>
                 <td>${newUser.email}</td>
-                <td>
-                <button onclik="deleteUser('${newUser.username}')">
-                Delete ${newUser.username}
-                <button/>
-                </td>
-            </trs>
+            </tr>
         `
     })
 }
