@@ -74,7 +74,8 @@ function addUser() {
         }
         if (isValidUser(newUser)) {
             users.push(newUser);
-            addTable(newUser)
+            //addTable(newUser)
+            refreshTable();
             alert("User sikeresen hozzáadva")
             newUserRefs.username.value = "";
             newUserRefs.password.value = "";
