@@ -1,5 +1,3 @@
-const { use } = require("react");
-
 const newUserRefs = {
     username: document.getElementById("new-username-input"),
     password: document.getElementById("new-password-input"),
@@ -18,11 +16,6 @@ function addTable(newUser) {
                 <td>${newUser.username}</td>
                 <td>${newUser.password}</td>
                 <td>${newUser.email}</td>
-                <td>
-                <button onclik="deleteUser('${newUser.username}')">
-                Delete ${newUser.username}
-                <button/>
-                </td>
             </tr>
         `
     }
@@ -43,12 +36,11 @@ function refreshTable(){
             <th>Username</th>
             <th>Password</th>
             <th>Email</th>
-            <th>Delete</th>
         </thead>
     `;
     users.forEach((u) => {
         usersTable.innerHTML += `
-            <tr>
+            <tr onclick="deleteUser('${u.username}')">
                 <td>${newUser.username}</td>
                 <td>${newUser.password}</td>
                 <td>${newUser.email}</td>
@@ -57,7 +49,7 @@ function refreshTable(){
                 Delete ${newUser.username}
                 <button/>
                 </td>
-            </tr>
+            </trs>
         `
     })
 }
