@@ -52,5 +52,6 @@ td, th{
     font-size: 1.5rem;
 }
 tr:hover{
-    opacity: red;
+    opacity: 0.5;
+    background-color: brown;
 }

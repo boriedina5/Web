@@ -8,7 +8,7 @@ const searchInput = document.getElementById("searchInput");
 const searchResultDiv = document.getElementById("searchResultDiv");
 const usersTable = document.getElementById("users-table");
 
-function addTable(newUser) {
+/*function addTable(newUser) {
     if (usersTable) {
 
         usersTable.innerHTML += `
@@ -19,7 +19,8 @@ function addTable(newUser) {
             </tr>
         `
     }
-}
+}*/
+
 function deleteUser(usernameToDelete) {
     //Megoldás 1
     //users = users.filter((u) => username !== usernameToDelete);
@@ -107,3 +108,4 @@ function search() {
         searchResultDiv.innerHTML = s;
     }
 }
+refreshTable();
