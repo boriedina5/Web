@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="InputContainer">
+        <div id="new-user-div">
+            <input type="text" id="new-username-input" placeholder="username"></br>
+            <input type="password" id="new-password-input" placeholder="password"></br>
+            <input type="text" id="new-email-input" placeholder="emial"></br>
+            <button onclick="addUser()">Create new user</button>
+        </div>
+        <div id="search-user-div">
+            <input type="text" placeholder="Name to search..." id="searchInput"></br>
+            <button onclick="search()">Search</button>
+            <div id="searchResultDiv"></div>
+        </div>
+    </div>
+    <table id="users-table">
+        <thead>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Delete</th>
+        </thead>
+    </table>
+    </div>
+</body>
+
+</html>

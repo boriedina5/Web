@@ -1,0 +1,53 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: darkseagreen;
+}
+#InputContainer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+#new-user-div, #search-user-div {
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem;
+    border-radius: 20px;
+    background-color: rgb(64, 108, 108);
+}
+
+input, button {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    height: 2.5rem;
+    text-align: center;
+}
+
+input {
+    padding: 0.5rem;
+}
+input:placeholder-shown {
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    font-family: 'BBH Sans Hegarty';
+}
+table{
+    width: 75%;
+    border-collapse: collapse/*nem szedi szét a szegélyt*/
+}
+td, th{
+    border: 2px solid black ; /*vastagság, kinézett, szín*/
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
