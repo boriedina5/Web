@@ -7,6 +7,8 @@ let users = [];
 const searchInput = document.getElementById("searchInput");
 const searchResultDiv = document.getElementById("searchResultDiv");
 const usersTable = document.getElementById("users-table");
+const binNav = document.getElementById()
+let bin = [];
 
 /*function addTable(newUser) {
     if (usersTable) {
@@ -20,19 +22,33 @@ const usersTable = document.getElementById("users-table");
         `
     }
 }*/
+function addToBin(username) {
+    bin.push(users.find((u) => u.username === username))
+    refreshBin();
+    deleteFromUsesrs(username)
+}
 
-function deleteUser(usernameToDelete) {
+function deleteFromUsesrs(usernameToDelete) {
     //Megoldás 1
     //users = users.filter((u) => username !== usernameToDelete);
 
     //Megoldás 2
+
     users.splice(users.indexOf(
         users.find(
-            (u) => username !== usernameToDelete)), 1);
-    console.log(users);
+            (u) => u.username !== usernameToDelete)), 1);
+    refreshTable();
 }
-function refreshTable(){
-    usersTable.innerHTML =`
+
+function restoreUser(username){
+    users.push(bin.find((u) => u.username === username));//usershez hozzáadja, amit vissza szeretnénk állítani
+    bin = bin.filter((b) => b.username !== username);
+    refreshBin//frissít
+    refreshTable
+}
+
+function refreshTable() {
+    usersTable.innerHTML = `
         <thead>
             <th>Username</th>
             <th>Password</th>
@@ -41,13 +57,25 @@ function refreshTable(){
     `;
     users.forEach((u) => {
         usersTable.innerHTML += `
-            <tr onclick="deleteUser('${u.username}')">
-                <td>${newUser.username}</td>
-                <td>${newUser.password}</td>
-                <td>${newUser.email}</td>
+            <tr onclick="addToBin('${u.username}')">
+                <td>${u.username}</td>
+                <td>${u.password}</td>
+                <td>${u.email}</td>
             </tr>
         `
-    })
+    })//deleteUsers -> addToBin
+}
+function refreshBin() {
+    if (binNav) {
+        bin.innerHTML = "<h1>KUKA: </h1>"
+        bin.forEach((b) => {
+            binNav.innerHTML +=`
+                <p class="bin-name" onclick="restoreUser('${b.username}')">
+                ${b.username}
+                </p>
+            `
+        })
+    }
 }
 
 function isValidUser(userObj) {//érdemes egy fv kiszervezni az ellenőrzést

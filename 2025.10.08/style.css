@@ -8,6 +8,11 @@ body {
     padding: 0;
     background-color: darkseagreen;
 }
+nav{
+    width: 100vw;
+    height: 12rem;
+    background-color: aquamarine;
+}
 #InputContainer{
     display: flex;
     flex-flow: row nowrap;
