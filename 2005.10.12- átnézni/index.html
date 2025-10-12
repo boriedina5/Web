@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="addNumbers">
+        <h1>Add numbers to the array</h1>
+        <button id="numbers" onclick="addNumbers()" value="1">1</button>
+        <button id="numbers" onclick="addNumbers()" value="1">2</button>
+        <button id="numbers" onclick="addNumbers()" value="1">3</button>
+        <button id="numbers" onclick="addNumbers()" value="1">4</button>
+        <button id="numbers" onclick="addNumbers()" value="1">5</button>
+        <button id="numbers" onclick="addNumbers()" value="1">6</button>
+        <button id="numbers" onclick="addNumbers()" value="1">7</button>
+        <button id="numbers" onclick="addNumbers()" value="1">8</button>
+        <button id="numbers" onclick="addNumbers()" value="1">9</button>
+    </div>
+    <div class="modifications">
+        <h1>You can modify the array</h1>
+        <button onclick="deleteFromFront()" id="fornt">Delete from the front</button>
+        <button onclick="deleteFromEnd()" id="end">Delete from the end</button>
+        <button onclick="empty()" id="empty">Delete all elements</button>
+    </div>
+    <div class="actual">
+        <h1>Press it, if you would like to see the all modifications</h1>
+        <button onclick="actualDatas()" id="actualData">Show the actual datas of the array</button>
+        <div class="results">
+
+        </div>
+    </div>
+
+</body>
+</html>
