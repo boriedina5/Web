@@ -20,7 +20,7 @@ console.log(s.repeat(szám));//Adott szám alapján ismétli a kiiratásnál
 console.log(s.replace("a", "A"));//Kicseréli az először megadott karaktert a második megadott karakterre
 console.log(s.slice(1, 4));//Megadott számok alapján jeleníti meg a stringet | abcabc -> bca (4. indexet már nem tartalmazza, [1, 4[)
 console.log(s.slice(4));//4.től végig írja
-console.log(s.trim(4));//üres space-ek az elejéről és végéről
+console.log(s.trim());//üres space-ek az elejéről és végéről
 console.log(s.toString());//stringgé alakítja
 
 //Int beépített függvények
