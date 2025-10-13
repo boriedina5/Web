@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Game</title>
+</head>
+<body>
+    <div class="userInterface">
+        <h1>Guess The Number Game</h1>
+        <form>
+            <input type="number" placeholder="Enter a number" id="numberInput"/>
+            <button onclick="guessedNumber()" type="submit" id="submit">Submit</button>
+            <button type="reset" onclick="restartGame()" id="reset">Reset</button>
+        </form>
+    </div>
+    <div id="message">
+
+    </div>
+</body>
+</html>
