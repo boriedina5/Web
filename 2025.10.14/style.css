@@ -13,3 +13,32 @@ h1{
     justify-content: center;
     display: block;
 }
+.Inputs button{
+    margin: auto 0;
+    justify-content: ceenter;
+    display: block;
+    margin-top: 2rem;
+    background-color: burlywood;
+    border: 2px solid rgba(165, 42, 42, 0.68);
+
+}
+.receipeDiv{
+    justify-content: center;
+    background-color: burlywood;
+    border: 2px solid rgba(165, 42, 42, 0.68);
+    box-shadow: 2%;
+
+}
+.receipeH2{
+    text-align: center;
+    font-weight: bold;
+}
+.receipeImg{
+    justify-content: center;
+    width: 10rem;
+    height: 5rem;
+
+}
+.receipeIl{
+    justify-content: left;
+}
