@@ -1,0 +1,15 @@
+body{
+    background-color: brown;
+    color: azure;
+}
+h1{
+    text-align: center;
+}
+.Inputs input{
+    justify-content: center;
+    display: block;
+}
+.Inputs textarea{
+    justify-content: center;
+    display: block;
+}
