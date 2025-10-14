@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylessheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    
     <title>Receipes</title>
 </head>
 <body>
@@ -13,10 +13,12 @@
         <input type="text" name="receipeName" id="receipeName" placeholder="Enter receipe name">
         <input type="text" name="receipePic" id="receipePic" placeholder="Enter the url for the picture">
         <textarea name="receipeIngredients" id="receipeIngredients" placeholder="Enter ingredients"></textarea>
-        <button onclick="addReceipe()" id="submit"></button>
+        <button onclick="addReceipe()" id="submit">Add Receipes</button>
     </div>
-    <div class="Receipes">
+    <div id="Receipes">
         <h1>Receipes</h1>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
