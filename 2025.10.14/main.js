@@ -2,13 +2,11 @@ let arrayIngredients = [];
 let imgUrl = document.getElementById("receipePic")
 //let receipe = document.getElementsByClassName("Receipes"); - TMLCollection-t ad vissza, nem egyetlen elemet. A HTMLCollection olyan, mint egy lista (tömbszerű objektum)
 let receipe = document.getElementById("Receipes")
+let receipeIngredientsRef = document.getElementById("receipeIngredients");
 
 function SpliteElemetToArray(){
-    arrayIngredients = stringIngredients.split(";");
-   /*while(stringIngredients.length){
-        arrayIngredients.push(stringIngredients.splite(";"));
-   } - felesleges*/
-    arrayIngredients = stringIngredients.split(";");
+    arrayIngredients = receipeIngredientsRef.value.split(";");
+    arrayIngredients.forEach((inst) => {receipe.innerHTML += `<p>${inst}</p>`})
 }
 function createElements(){
     SpliteElemetToArray()
