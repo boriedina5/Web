@@ -39,18 +39,18 @@ body{
     align-items: center;
 }
 .stringP{
-    font-size: var(--md-font-size);
+font-size: var(--lg-font-size);
     margin: 0;
-    padding: var(--md-font-size);
+    padding: var(--lg-font-size);
     background-color: var(--pbg-color);
     border-width: 0;
     border-radius: 20px;
 }
-.stringP-hover{
+.stringP:hover {
     opacity: 0.7;
-    transform: scale(1.2); /*ha scaleX - ezen a koordináta mentén húzza szét*/
+    transform: scale(1.2);
     cursor: pointer;
 }
-.stringP:active{
-    transform: scale(0.4);
+.stringP:active {
+    transform: scale(0.6);
 }

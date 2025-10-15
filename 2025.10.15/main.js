@@ -56,6 +56,6 @@ function newString(){//CONTROLLER az MVC modell szerint, mert gombot kezel
     }
 }
 function sortStrings(){
-    stringArray.sort()//TODO ASCII karakterek
-    refreshDiv()
+    stringArray.sort((a, b) => a.toLowerCase() - b.toLowerCase())//TODO ASCII karakterek
+    refreshDiv() //VIEW
 }
