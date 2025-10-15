@@ -26,7 +26,7 @@ function refreshDiv(){
         targetDiv.innerHTML = "";
         stringArray.forEach((s) => {
             targetDiv.innerHTML += `
-            <p onlclik="changeCase(${s})">${s}</p>
+            <p onlclik="changeCase(${s})" class="stringP">${s}</p>
             `
         })
     }
