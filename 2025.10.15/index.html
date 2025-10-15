@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <title>Document</title>
+    <script src="main.js" defer></script>
+    <title>2025.10.15</title>
 </head>
 <body>
-    
+    <div class="newDiv">
+        <input type="text" id="newInput">
+        <button onclick="newString()">Add new string</button>
+    </div>
+    <div id="stringsDiv">
+        <button onclick="sortStrings()">Order</button>
+        <div id="targetDiv"></div>
+    </div>
 </body>
 </html>
