@@ -56,5 +56,6 @@ function newString(){//CONTROLLER az MVC modell szerint, mert gombot kezel
     }
 }
 function sortStrings(){
-    //TODO
+    stringArray.sort()//TODO ASCII karakterek
+    refreshDiv()
 }
