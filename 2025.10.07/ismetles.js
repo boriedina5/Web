@@ -1,4 +1,6 @@
-//var - global scope: minden fájl eléri és a weboldalon is eléri a felhasználó
+//var problémái
+    // - global scope: minden fájl eléri és a weboldalon is eléri a felhasználó
+    // - újra deklarálható
 // var és let közötti különbség:
     //var: dekrarálást írom felül
     //let: definiálást írom felül
