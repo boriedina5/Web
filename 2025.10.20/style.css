@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(124, 198, 207);
+}
+h1{
+    text-align: center;
+}
+#inputs{
+    display: block;
+    justify-content: center;
+    border: 3px solid rgb(184, 0, 231);
+    padding: 25px;
+    max-width: 30%;
+    margin: auto;
+}
+
+#inputs input{
+    justify-self: center;
+    display: block;
+    margin-top: 1rem;
+}
+#inputs button{
+    justify-self: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background-color:  rgb(184, 0, 231);
+    color: white;
+}
+#cards{
+    justify-content: center;
+    margin-top: 3rem;
+}
+.MediaCard{
+    justify-content: center;
+    display: block;
+    justify-content: center;
+    border: 3px solid rgb(184, 0, 231);
+    padding: 25px;
+    max-width: 20%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.characterPic{
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+#cards h2, h4{
+    text-align: center;
+}
+#cards hr{
+    border: 1.5px solid rgb(184, 0, 231);
+    margin-bottom: 2rem;
+}
+

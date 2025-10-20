@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(159, 210, 159);
+    color: rgb(29, 9, 9);
+}
+#h1{
+   color: rgb(29, 9, 9);
+   text-align: center; 
+}
+#formDiv input{
+    justify-self: center;
+    display: block;
+    margin-top: 1rem;
+    
+    background-color: rgb(52, 127, 52);
+    color: wheat;
+}
+#formDiv input:placeholder-shown{
+    color: wheat;
+}
+#formDiv button{
+    margin: 0 auto;
+    justify-content: center;
+    display: block;
+    margin-top: 1rem;
+
+    background-color: rgb(52, 127, 52);
+    color: wheat;
+}
+#cardDiv{
+    display: flex;
+    flex-flow: row;
+    margin-left: 2rem;
+}
+.h4{
+    color: wheat;
+}
+.p{
+    color: wheat;
+}
