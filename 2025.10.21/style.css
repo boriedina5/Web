@@ -1,0 +1,72 @@
+body{
+    background-color: #263238;
+    color: #cfd8dc;
+}
+h1{
+    text-align: center;
+}
+#inputs{
+    display: block;
+    justify-content: center;
+    border: 3px solid #b1bec5;
+    padding: 25px;
+    max-width: 30%;
+    margin: auto;
+}
+
+#inputs input{
+    justify-self: center;
+    display: block;
+    margin-top: 1rem;
+}
+#inputs label{
+    justify-self: center;
+    display: block;
+    margin-top: 1rem;
+    
+}
+#buttonAlbum{
+    justify-self: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background-color:  #b1bec5;
+    color: #546e7a;
+}
+#buttonLike, #buttonDislike{
+    justify-self: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background-color:  #b1bec5;
+    color: #546e7a;
+}
+
+#cards{
+    justify-content: center;
+    margin-top: 3rem;
+}
+.albumDiv{
+    justify-content: center;
+    display: block;
+    justify-content: center;
+    border: 3px solid #b1bec5;
+    padding: 25px;
+    max-width: 20%;
+    margin: auto;
+    margin-top: 3rem;
+}
+#dataDiv p{
+    text-align: center;
+}
+.albumPic{
+  display: block;
+  margin: auto;
+  width: 40%;
+
+}
+#cards h4{
+    text-align: center;
+}
+
+
