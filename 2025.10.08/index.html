@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
-
 <body>
-    <header>
-        
-    </header>
-
-    <div id="InputContainer">
+    <nav id="bin"><h1>KUKA:</h1></nav>
+    <div id="input-container">
         <div id="new-user-div">
-            <input type="text" id="new-username-input" placeholder="username"></br>
-            <input type="password" id="new-password-input" placeholder="password"></br>
-            <input type="text" id="new-email-input" placeholder="emial"></br>
+            <!-- <label for="new-username-input">Username: </label>
+            <input type="text" id="new-username-input" /> <br/>
+            <label for="new-password-input">Password: </label>
+            <input type="password" id="new-password-input" /> <br/>
+            <label for="new-email-input">E-mail: </label>
+            <input id="new-email-input"/><br/> -->
+            <input placeholder="Username..." type="text" id="new-username-input" />
+            <input placeholder="Password..." type="password" id="new-password-input" />
+            <input placeholder="E-mail..." id="new-email-input" type="email"/>
             <button onclick="addUser()">Create new user</button>
         </div>
         <div id="search-user-div">
-            <input type="text" placeholder="Name to search..." id="searchInput"></br>
+            <input placeholder="Name to search..." id="search-input" />
             <button onclick="search()">Search</button>
-            <div id="searchResultDiv"></div>
+            <div id="search-result-div"></div>
         </div>
     </div>
     <table id="users-table">
-        <thead>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Email</th>
-        </thead>
     </table>
-    </div>
-</body>
 
+</body>
 </html>

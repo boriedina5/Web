@@ -1,60 +1,46 @@
 const newUserRefs = {
     username: document.getElementById("new-username-input"),
     password: document.getElementById("new-password-input"),
-    email: document.getElementById("new-email-input"),
-}
-let users = [];
-const searchInput = document.getElementById("searchInput");
-const searchResultDiv = document.getElementById("searchResultDiv");
+    email: document.getElementById("new-email-input")
+};
+const searchInput = document.getElementById("search-input");
+const searchResultDiv = document.getElementById("search-result-div");
 const usersTable = document.getElementById("users-table");
-const binNav = document.getElementById()
-let bin = [];
+const binNav = document.getElementById("bin");
+let users = []
+let bin = []
 
-/*function addTable(newUser) {
-    if (usersTable) {
-
-        usersTable.innerHTML += `
-            <tr>
-                <td>${newUser.username}</td>
-                <td>${newUser.password}</td>
-                <td>${newUser.email}</td>
-            </tr>
-        `
-    }
-}*/
-function addToBin(username) {
-    bin.push(users.find((u) => u.username === username))
+function addToBin(username){
+    bin.push(users.find(u => u.username === username));
     refreshBin();
-    deleteFromUsesrs(username)
+    deleteUserFromUsers(username);
 }
 
-function deleteFromUsesrs(usernameToDelete) {
-    //Megoldás 1
-    //users = users.filter((u) => username !== usernameToDelete);
-
-    //Megoldás 2
-
+function deleteUserFromUsers(usernameToDelete){
+    //users = users.filter((u) => u.username !== usernameToDelete);
+    
     users.splice(users.indexOf(
         users.find(
-            (u) => u.username !== usernameToDelete)), 1);
+            (u) => u.username === usernameToDelete)
+        ), 1
+    );
     refreshTable();
 }
 
 function restoreUser(username){
-    users.push(bin.find((u) => u.username === username));//usershez hozzáadja, amit vissza szeretnénk állítani
+    users.push(bin.find((u) => u.username === username));
     bin = bin.filter((b) => b.username !== username);
-    refreshBin//frissít
-    refreshTable
+    refreshBin();
+    refreshTable();
 }
 
-function refreshTable() {
+function refreshTable(){
     usersTable.innerHTML = `
         <thead>
             <th>Username</th>
             <th>Password</th>
-            <th>Email</th>
-        </thead>
-    `;
+            <th>E-mail</th>
+        </thead>`;
     users.forEach((u) => {
         usersTable.innerHTML += `
             <tr onclick="addToBin('${u.username}')">
@@ -63,78 +49,87 @@ function refreshTable() {
                 <td>${u.email}</td>
             </tr>
         `
-    })//deleteUsers -> addToBin
+    })
 }
-function refreshBin() {
-    if (binNav) {
-        bin.innerHTML = "<h1>KUKA: </h1>"
+
+function refreshBin(){
+    if(binNav){
+        binNav.innerHTML = "<h1>KUKA:</h1>";
         bin.forEach((b) => {
-            binNav.innerHTML +=`
+            binNav.innerHTML += `
                 <p class="bin-name" onclick="restoreUser('${b.username}')">
-                ${b.username}
+                    ${b.username}
                 </p>
             `
         })
     }
 }
 
-function isValidUser(userObj) {//érdemes egy fv kiszervezni az ellenőrzést
+function isValidUser(u){
     return (
-        userObj.username.length >= 4 &&
-        userObj.username.length <= 16 &&
-        userObj.password.length >= 8 &&
-        userObj.password.length <= 16 &&
-        userObj.email.length >= 10 &&
-        userObj.password.length <= 20 &&
-        !users.some((currentUser) => currentUser.username === userObj.username) &&//akkor kell igazat adjon, ha nem felel meg a feltételeknek
-        !users.some((currentEmail) => currentEmail.email === userObj.email)
-
+        u.username.length >= 4 &&
+        u.username.length <= 16 &&
+        u.password.length >= 8 &&
+        u.password.length <= 20 &&
+        u.email.length >= 10 &&
+        u.email.length <= 20 &&
+        !users.some((currUser) => currUser.username === u.username) &&
+        !users.some((currUser) => currUser.email === u.email)
     )
 }
 
-function addUser() {
-    if (newUserRefs.username && newUserRefs.password && newUserRefs.email) {//truty és falsy ággal ellenőrizzük megvannak-e az adatok
-        //console.log("Minden jó")
+function addUser(){
+    if(newUserRefs.username && newUserRefs.password && newUserRefs.email){
         let newUser = {
             username: newUserRefs.username.value,
             password: newUserRefs.password.value,
             email: newUserRefs.email.value,
         }
-        if (isValidUser(newUser)) {
+        if(isValidUser(newUser)){
             users.push(newUser);
-            //addTable(newUser)
             refreshTable();
-            alert("User sikeresen hozzáadva")
+            alert("User sikeresen hozzáadva");
             newUserRefs.username.value = "";
             newUserRefs.password.value = "";
             newUserRefs.email.value = "";
         }
-        else {
-            alert("Valamilyen hiba történt")
+        else{
+            alert("Valamelyik adat hibás vagy létező username/email")
         }
-
     }
-    else {
-        console.error("Valamelyik ref. nem valid") //formázott console.log
+    else{
+        console.error("Valamelyik ref invalid")
     }
 }
-function search() {
-    if (searchInput && searchResultDiv) {
-        const foundUser = users.find((u) => u.username === searchInput.value);//feltétel
+
+function search(){
+    if(searchInput && searchResultDiv){
+        const foundUser = users.find((u) => u.username === searchInput.value);
         let s = "";
-        if (foundUser) {
-            //siker
+        if(foundUser){
             s = `
                 <h3>${foundUser.username}</h3>
                 <p>${foundUser.password}</p>
                 <p>${foundUser.email}</p>
             `
         }
-        else {
-            //nem sikeres
-            s = "<h3>Nincs ilyen felhasználó</h3>"
+        else{
+            s = "<h3>Nincs ilyen felhasználónév</h3>"
         }
         searchResultDiv.innerHTML = s;
     }
 }
 refreshTable();
+
+//Adjunk hozzá egy html table-t a DOM-hoz.
+//Ha új felhasználót adunk hozzá, adja hozzá a table-höz.
+
+//Írjatok törlés gombot minden táblázat sor végére.
+//Gombnyomásra törli a recordot a users tömbből
+
+
+
+//Csináljunk egy navbar-t az oldal tetjén amiben alapból annyi van: KUKA:
+//Ha kitörlök egy elemet, ne törölje csak kerüljön a kukába.
+//Ha rákattintok a kukában az elem nevére, állítsa vissza
+//OPCIONÁLIS: KUKÁba egy törlés gomb ami minden elemet töröl

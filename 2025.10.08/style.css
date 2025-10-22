@@ -8,18 +8,21 @@ body {
     padding: 0;
     background-color: darkseagreen;
 }
-nav{
+
+nav {
     width: 100vw;
-    height: 12rem;
-    background-color: aquamarine;
+    height: 6rem;
+    background-color: cornflowerblue;
 }
-#InputContainer{
+
+#input-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     gap: 3rem;
 }
+
 #new-user-div, #search-user-div {
     width: 35%;
     height: 50%;
@@ -46,17 +49,19 @@ input:placeholder-shown {
     /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
     font-family: 'BBH Sans Hegarty';
 }
-table{
+
+table {
     width: 75%;
-    border-collapse: collapse/*nem szedi szét a szegélyt*/
+    border-collapse: collapse;
 }
-td, th{
-    border: 2px solid black ; /*vastagság, kinézett, szín*/
+
+td, th {
+    border: 2px solid black;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.5rem;
 }
-tr:hover{
-    opacity: 0.5;
-    background-color: brown;
+
+tr:hover {
+    background-color: rgb(207, 26, 26);
 }
