@@ -26,7 +26,7 @@ function renderGames(){
     franchises.forEach((f) => {
         const fDiv = document.createElement("div");
         fDiv.classList.add("franchise-div");
-        fDiv.innerHTML += `<h1>${f}</h1>`
+        fDiv.innerHTML += `<h1>${f} (${games.filter((g) => g.franchiseName === f).length})</h1>`
         const gameCardParent = document.createElement("div");
         gameCardParent.classList.add("game-card-parent");
         games.map((g) => {
