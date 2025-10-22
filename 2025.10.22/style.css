@@ -1,0 +1,96 @@
+:root {
+    --background-color: #63db4c;
+    --franchise-background-color: #396e0a;
+    --game-background-color: #457c15;
+    --sm-fs: 1.5rem;
+    --md-fs: 2rem;
+    --lg-fs: 2.5rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--lg-fs);
+    margin: 0;
+    padding: 0;
+}
+
+#new-game-div {
+    width: 100%;
+    padding: var(--sm-fs);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sm-fs);
+}
+#new-game-div input, #new-game-div button {
+    font-size: var(--lg-fs);
+    text-align: center;
+    width: 20%;
+}
+
+#franchise-container {
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--md-fs)
+}
+
+.franchise-div {
+    width: 100%;
+    margin: 0;
+    padding: var(--md-fs);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--sm-fs);
+    border-radius: 20px;
+    background-color: var(--franchise-background-color);
+}
+.franchise-div:hover {
+    opacity: 0.8;
+}
+.franchise-div h1 {
+    font-size: var(--lg-fs);
+    color: white;
+}
+.game-card {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: calc(var(--sm-fs) / 2);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    text-align: center;
+    gap: calc(var(--sm-fs) / 2);
+    background-color: var(--game-background-color);
+    border-radius: 20px;
+}
+.game-card p {
+    color: white;
+    font-size: var(--sm-fs);
+}
+.game-card:hover {
+    cursor: pointer;
+}
+a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.game-card-parent {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--sm-fs);
+    justify-content: flex-start;
+    align-items: center;
+}
