@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Felhasználói oldal</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h2 onclick="setDivVisibility('register')">Register</h2>
+        <h2 onclick="setDivVisibility('users')">Users</h2>
+    </nav>
+    <div id="page-content">
+        <div id="new-user-div">
+            <form id="new-user-form">
+                <input name="fullName" placeholder="Full name..." />
+                <input name="userName" placeholder="Username..." />
+                <input name="dateOfBirth" type="date" placeholder="Date of birth" />
+                <input name="placeOfBirth" placeholder="Place of birth..." />
+                <input type="submit" value="Add user" />
+            </form>
+        </div>
+        <div id="users-div">
+            Placeholder a felhasználóknak
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+:root {
+    --background-color: #4391d6;
+    --container-background-color: #1b5483;
+    --font-color: white;
+    --navbar-background-color: #ad37c8;
+    --sm-fs: 1rem;
+    --md-fs: 1.75rem;
+    --lg-fs: 2.5rem;
+    --xl-fs: 3.25rem;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+#navbar {
+    margin: 0;
+    padding: var(--sm-fs);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: calc(var(--xl-fs) * 2);
+    background-color: var(--navbar-background-color);
+    color: var(--font-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--lg-fs)
+}
+#navbar > h2 {
+    margin: 0;
+    padding: 0;
+    font-size: var(--lg-fs);
+}
+#navbar > h2:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+#page-content {
+    padding-top: calc(var(--xl-fs) * 3);
+    width: 100%;
+}
+#new-user-div {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+#new-user-form {
+    width: 25%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--sm-fs);
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    padding: var(--lg-fs);
+    background-color: var(--container-background-color);
+}
+#new-user-form input {
+    height: calc(var(--md-fs) * 1.2);
+    line-height: calc(var(--md-fs) * 1.1 );
+    font-size: var(--md-fs);
+    width: 75%;
+}
