@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="add-or-edit">
+        <div id="new-sturdent">
+            <div class="title-div">
+                <h2>Add new student</h2>
+            </div>
+            <div id="inputs-div">
+                <input type="text" placeholder="Student's name" id="students-name">
+                <input type="text" placeholder="Subject's name" id="subject-name">
+                <h5>Grades</h5>
+                <select name="grades" id="grades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button onclick="addTheNewStudent()" id="add-new-student">Add new student</button>
+            </div>
+
+        </div>
+        <div id="edit-sturdent">
+            <div class="title-div">
+                <h2>Edit student</h2>
+            </div>
+            <div id="inputs-div">
+                <input type="text" placeholder="Student's name" id="exist-students-name">
+                <input type="text" placeholder="Subject's name" id="edit-subject-name">
+                <h5>Grades</h5>
+                <select name="edit-grades" id="edit-grades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <button onclick="editStudent()" id="add-new-student">Add new grade</button>
+            </div>
+
+        </div>
+
+        <div id="calculate-averages">
+            <div class="title-div">
+                <h2>Calculate Average</h2>
+            </div>
+                
+                <button onclick="calculate()" id="add-new-student">Calculate Average</button>
+
+
+        </div>
+    </div>
+    <hr>
+    <div id="show-students">
+
+    </div>
+</body>
+
+</html>

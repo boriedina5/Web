@@ -1,0 +1,113 @@
+:root{
+    --background-color: #385765;
+    --container-background-color: #30a8cb;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.title-div{
+    background-color: var(--container-background-color);
+    
+}
+.title-div h2{
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0rem;
+    height: 3rem;
+}
+#add-or-edit{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#new-sturdent, 
+#edit-sturdent
+{
+    background-color: white;
+    color: black;
+    padding-bottom: 25px;
+    min-width: 20%;
+    margin: auto;
+    
+}
+
+#inputs-div input{
+    display: block;
+    background-color: rgba(224, 222, 222, 0.904);
+    justify-content: center; 
+    margin: auto;
+    margin-bottom: 1rem;
+}
+#inputs-div select{
+    display: block;
+    justify-content: center; 
+    margin: auto;
+    margin-bottom: 1rem;
+}
+#inputs-div h5{
+    text-align: center;
+}
+#inputs-div button{
+    background-color: var(--container-background-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border-color: var(--container-background-color);
+}
+
+#calculate-averages{
+    background-color: white;
+    color: black;
+    padding-bottom: 25px;
+    min-width: 20%;
+    margin: auto;
+    height: 15rem;
+}
+#calculate-averages button{
+    background-color: var(--container-background-color);
+    border-color: var(--container-background-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5.5rem;
+}
+hr{
+    color: white;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+
+
+
+
+.added-student-card{
+    background-color: white;
+    color: black;
+    padding-bottom: 25px;
+    max-width: 20%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.title-div h3{
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 0rem;
+    height: 3rem;
+}
+.h5{
+    text-align: center;
+}
+.p{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
