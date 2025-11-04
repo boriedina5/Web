@@ -133,3 +133,4 @@ refreshTable();
 //Ha kitörlök egy elemet, ne törölje csak kerüljön a kukába.
 //Ha rákattintok a kukában az elem nevére, állítsa vissza
 //OPCIONÁLIS: KUKÁba egy törlés gomb ami minden elemet töröl
+
