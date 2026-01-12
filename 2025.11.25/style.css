@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+#people{
+    margin-left: 10rem;
+    background-color: rgb(187, 230, 236);
+    max-width: fit-content;
+    padding: 2rem;
+}
+
+#thatChat{
+    margin-right: 10rem;
+    background-color: rgb(187, 230, 236);
+    max-width: 20%;
+    padding: 2rem;
+}
+.personDiv{
+    background-color: rgb(187, 230, 236);
+    border: 1px solid rgb(174, 232, 239);
+    margin: left;
+    margin-bottom: 0.1rem;
+    height: min-content;
+    width: 10rem;
+}
+.namep{
+    margin: 1rem;
+}
+.h3{
+    text-align: center;
+}

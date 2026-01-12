@@ -1,0 +1,56 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 2rem;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    justify-content: felx-start;
+    align-items: center;
+    background-color: aquamarine;
+    opacity: 0.9;
+
+}
+#checkbox-container:hover{
+    opacity: 1;
+}
+#checkbox-container{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+}
+#checkbox-container > div{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+}
+#checkbox-container > div > * {/*containerben lévő divnek a gyerekeire*/
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+#target-table{
+    width: 60%;
+    border-collapse: collapse;
+}
+#target-table > thead, #target-table > tr{
+    width: 25%;
+    height: 2.5rem;
+}
+tr:hover{
+    background-color: aqua;
+}
+td, th{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+
+}
