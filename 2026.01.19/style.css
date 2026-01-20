@@ -1,0 +1,26 @@
+body{
+    width: 100vw;
+    height: 100vw;
+    background-color: aquamarine;
+}
+h1{
+    text-align: center;
+}
+#inputs{
+    text-align: center;
+}
+#target-div{
+   justify-items: center;
+}
+#target-table{
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid green;
+    border-collapse: collapse;
+}
+#target-table th, td{
+    border: 1px solid green;
+    width: 10rem;
+    text-align: center;
+}
+

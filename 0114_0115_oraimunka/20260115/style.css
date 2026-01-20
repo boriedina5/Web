@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #091f32;
+    --text-color: white;
+    --row-hover-color: #113453;
+    --fs-sm: 1rem;
+    --fs-md: 1.75rem;
+    --fs-lg: 2.75rem;
+    --gap-sm: 0.5rem;
+    --gap-md: 1rem;
+    --gap-lg: 1.5rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--gap-lg);
+    background-color: var(--bg-color);
+    font-family: "Roboto", sans-serif;
+
+}
+
+#search-div {
+    width: 100%;
+    margin: 0;
+    padding: calc(var(--gap-lg) * 2);
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--gap-sm);
+    justify-content: center;
+    align-items: center;
+}
+#search-div > * {
+    font-size: var(--fs-lg);
+    line-height: calc(var(--fs-lg) * 1.2);
+    height: calc(var(--fs-lg) * 1.4);
+}
+#target-table {
+    width: 75%;
+    border-collapse: collapse;
+}
+#target-table tr {
+    height: 25vh;
+}
+#target-table tr:hover {
+    background-color: var(--row-hover-color);
+}
+#target-table td {
+    padding: 0;
+    border: 0;
+    font-size: var(--fs-lg);
+    color: var(--text-color);
+}
+#target-table tr > td:nth-child(1), #target-table tr > td:nth-child(3), #target-table tr > td:nth-child(4) {
+    width: 15%;
+}  
+#target-table img {
+    height: 33vh;
+}
+#pagination-div {
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: calc(var(--gap-lg) * 2);
+    justify-content: center;
+    align-items: center;
+}
+#pagination-div * {
+    font-size: var(--fs-md);
+    line-height: calc(var(--fs-md) * 1.2);
+    height: calc(var(--fs-md) * 1.4);
+    font-weight: 700;
+}
+#pagination-div > * {
+    margin: var(--gap-md);
+    
+}
+/* #pagination-div button {
+    padding: var(--gap-sm);
+} */
