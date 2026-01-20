@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cicás képek készítése</h1>
+    <div id="input-div">
+        <input type="text" id="cat-pic-tag" placeholder="Please enter the tag">
+        <input type="text" id="cat-pic-tring" placeholder="Please enter the text">
+        <br/>
+        <button onclick="getCatsData()">Kép hozzáadása</button>
+    </div>
+    <div id="target-div">
+        <div id="delete">
+            <h2>Készített kép törlése</h2>
+            <input type="number" id="numberOfPic" placeholder="Kép sorszáma"/>
+            <br/>
+            <button onclick="deletePic()">Delete</button>
+        </div>
+        <div id="cat-cards">
+
+        </div>
+    </div>
+</body>
+</html>
