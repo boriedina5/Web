@@ -36,12 +36,12 @@ console.log(Math.round());//
 let arr = [100, 200, 300, 400, 500]
 console.log(arr.reverse());//Megfordítja a atringet
 console.log(arr.join());//Tömböt stringként adja vissza, de nem változtatja meg a tömböt, mint típus
-console.log(arr.slice(2));//Kiválasztott elemet visszaadja egy új tömbben
+console.log(arr.slice(2));//Kiválasztott index alapján az elemt visszaadja egy új tömbben
 console.log(arr.includes());//Tartalmazza-e a tömb
 console.log(arr.push());//Elemet ad hozzá
 console.log(arr.pop());//utolsó elemet törli és visszatér
 arr.splice(arr.indexOf(300), 1);//törli az adott elemet
-    //^ paraméterek: melyik indextől, hány elemet
+    //^ paraméterek: melyik elemtől, hány indexet
 
 arr.forEach() //minden egyes elemre meghívódik a fv
 arr.forEach((value, index) => {console.log(index+1, ":", value)})
@@ -57,7 +57,7 @@ const peopleArr = [
 ]
 console.log(peopleArr.some((p) => {return p.age == 40 || p.username === "Pista"}))
 
-console.log(arr.map((n) => {return n*2}))//callback fv, ami egy feltétel alapján új tömböt csinál
+console.log(arr.map((n) => {return n*2}))//callback fv, ami egy feltétel alapján új tömböt csinál, pl. műveletet hajt végre
 //console.log(arr.reduce((prev, curr) => prev - curr, 0))//Mit csináljon a jelenlegi elemmel és az előző elemmel és van egy kiindulási érték
 
 

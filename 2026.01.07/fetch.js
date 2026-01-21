@@ -14,11 +14,11 @@ function search(){
 async function getData(url){
     let resObj = await fetch(url)
     .then ((data) => data.json())
-    allCharacters.push(...resObj.results)
+    allCharacters.push(...resObj.results) //"Beindító hívás"
     while(resObj.info.next){
         resObj = await fetch(resObj.info.next)
             .then(data => data.json());
-        allCharacters.push(...resObj.results)
+        allCharacters.push(...resObj.results)//folytatás
     }   
 }
 function printCharacters(_characters){
